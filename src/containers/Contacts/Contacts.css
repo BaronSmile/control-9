@@ -1,0 +1,28 @@
+.contacts-top {
+    border-bottom: 1px solid #c8c8c8;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+}
+
+.contacts-top h1 {
+    float: left;
+    margin: 0;
+}
+
+.contacts-top .btnAdd {
+    float: right;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    background-color: orange;
+    font-weight: bold;
+}
+
+.contacts-block {
+    margin: 0 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

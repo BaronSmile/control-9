@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
+import {Switch, Route} from 'react-router-dom';
 import './App.css';
+import Contacts from "./containers/Contacts/Contacts";
+import AddContact from "./containers/ContactForms/AddContact";
+import EditContact from "./containers/ContactForms/EditContact";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+
+        <Switch>
+          <Route path="/" exact component={Contacts}/>
+          <Route path="/add_contact" exact component={AddContact}/>
+          <Route path="/edit_contact" exact component={EditContact}/>
+          <Route render={() => <h1>404 page not found</h1>}/>
+        </Switch>
+      </Fragment>
+    );
+  }
 }
 
 export default App;
